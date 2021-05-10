@@ -32,6 +32,7 @@
 
 <script>
 import { fetchLogin } from '@/api/user'
+
 export default {
   name: 'UserLogin',
   props: {},
@@ -50,15 +51,12 @@ export default {
       this.$router.push({ path: '/register' })
     },
     // 表单提交
-    async onClickButtonSubmit(e, username, password) {
+    async onClickButtonSubmit() {
       // conosle.log(e)
       if (this.username == '') {
         this.$toast('用户名不能为空')
-        return false
-      }
-      if (this.password == '') {
+      } else if (this.password == '') {
         this.$toast('密码不能为空')
-        return false
       } else {
         const res = await fetchLogin({ username: this.username, password: this.password })
         console.log(res)

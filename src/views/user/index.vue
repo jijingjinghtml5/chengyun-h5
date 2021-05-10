@@ -24,11 +24,12 @@ import NavBar from '@/components/NavBar/index'
 import TabBar from '@/components/TabBar/index'
 import { mapGetters } from 'vuex'
 import avatar from '@/assets/image/my.png'
+
 export default {
   data() {
     return {
       wechat: ``,
-      avatar: avatar
+      avatar
     }
   },
   components: {
