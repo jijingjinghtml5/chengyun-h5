@@ -1,7 +1,6 @@
-'use strict'
 const path = require('path')
+const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer')
 const defaultSettings = require('./src/config/index.js')
-const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 const resolve = dir => path.join(__dirname, dir)
 // page title

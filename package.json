@@ -9,7 +9,14 @@
     "build": "vue-cli-service build",
     "stage": "vue-cli-service build --mode staging",
     "lint": "vue-cli-service lint",
-    "new": "plop"
+    "new": "plop",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{vue,js,ts}": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -31,10 +38,15 @@
     "babel-eslint": "^10.1.0",
     "babel-plugin-import": "^1.13.0",
     "babel-plugin-transform-remove-console": "^6.9.4",
-    "eslint": "^6.7.2",
+    "eslint": "^7.26.0",
+    "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
+    "eslint-import-resolver-alias": "^1.1.2",
+    "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.4.0",
-    "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vue": "^7.9.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
     "node-sass": "^4.14.1",
     "plop": "^2.7.4",
     "postcss-pxtorem": "^5.1.1",
