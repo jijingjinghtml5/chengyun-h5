@@ -1,7 +1,7 @@
 <!-- home -->
 <template>
   <div class="page-container gray-bg">
-   <NavBar :showBack="false" title="我"></NavBar>
+    <NavBar :showBack="false" title="我"></NavBar>
     <div class="page-warpper">
       <div class="my-mess">
         <div class="flex space-between">

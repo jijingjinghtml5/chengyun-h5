@@ -42,7 +42,7 @@ export default {
       password: ''
     }
   },
-    created() {},
+  created() {},
   mounted() {},
   methods: {
     onClickRight() {
@@ -51,6 +51,7 @@ export default {
     },
     // 表单提交
     async onClickButtonSubmit(e, username, password) {
+      // conosle.log(e)
       if (this.username == '') {
         this.$toast('用户名不能为空')
         return false
