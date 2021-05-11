@@ -14,7 +14,8 @@ module.exports = {
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
+    parser: 'babel-eslint'
   },
   plugins: ['vue'],
   rules: {
@@ -28,7 +29,13 @@ module.exports = {
     ],
     eqeqeq: [0, 'allow-null'],
     'no-shadow': 0,
-    'no-param-reassign': 0
+    'no-param-reassign': 0,
+    'no-underscore-dangle': 0,
+    'array-callback-return': 0,
+    'consistent-return': 0,
+    'no-restricted-syntax': 0,
+    'no-unused-expressions': 0,
+    'import/prefer-default-export': 0
   },
   settings: {
     'import/resolver': {

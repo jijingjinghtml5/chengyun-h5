@@ -4,10 +4,10 @@ import 'core-js/stable'
 import 'regenerator-runtime/runtime'
 
 import Vue from 'vue'
+import preventReClick from '@/directive/prevent-re-click'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import preventReClick from '@/directive/prevent-re-click'
 // 设置 js中可以访问 $cdn
 // import { $cdn } from '@/config'
 // Vue.prototype.$cdn = $cdn
@@ -17,12 +17,15 @@ import '@/plugins/vant'
 // 引入全局样式
 import '@/assets/css/index.scss'
 // 移动端适配
-import 'lib-flexible/flexible.js'
+import 'lib-flexible/flexible'
 
 // filters
 import './filters'
+
 Vue.config.productionTip = false
 Vue.use(preventReClick)
+
+/* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,

@@ -1,6 +1,6 @@
 import preventReClick from './preventReClick'
 
-const install = function (Vue) {
+const install = Vue => {
   Vue.directive('preventReClick', preventReClick)
 }
 

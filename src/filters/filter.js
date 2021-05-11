@@ -2,13 +2,18 @@
  *格式化时间
  *yyyy-MM-dd hh:mm:ss
  */
+
+function padLeftZero(str) {
+  return `00${str}`.substr(str.length)
+}
+
 export function formatDate(time, fmt) {
   if (time === undefined || '') {
     return
   }
   const date = new Date(time)
   if (/(y+)/.test(fmt)) {
-    fmt = fmt.replace(RegExp.$1, (date.getFullYear() + '').substr(4 - RegExp.$1.length))
+    fmt = fmt.replace(RegExp.$1, `${date.getFullYear()}`.substr(4 - RegExp.$1.length))
   }
   const o = {
     'M+': date.getMonth() + 1,
@@ -19,16 +24,13 @@ export function formatDate(time, fmt) {
   }
   for (const k in o) {
     if (new RegExp(`(${k})`).test(fmt)) {
-      const str = o[k] + ''
+      const str = `${o[k]}`
       fmt = fmt.replace(RegExp.$1, RegExp.$1.length === 1 ? str : padLeftZero(str))
     }
   }
   return fmt
 }
 
-function padLeftZero(str) {
-  return ('00' + str).substr(str.length)
-}
 /*
  * 隐藏用户手机号中间四位
  */

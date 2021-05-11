@@ -40,7 +40,7 @@ export default {
     }
   },
   watch: {
-    selectValue: function (newVal) {
+    selectValue(newVal) {
       this.value = newVal
     },
     value(newVal) {

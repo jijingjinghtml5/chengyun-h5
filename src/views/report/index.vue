@@ -23,6 +23,7 @@ import NavBar from '@/components/NavBar/index'
 import UploadImage from '@/components/UploadImage/index'
 import EventTypes from '@/components/EventTypes/index'
 import { mapGetters } from 'vuex'
+
 export default {
   name: 'Report',
   components: {
@@ -46,7 +47,7 @@ export default {
   methods: {
     // 提交上报
     submitReport() {
-      const actualCount = this.$refs['uploadImage'].getActualCount()
+      const actualCount = this.$refs.uploadImage.getActualCount()
       if (actualCount > this.photoList.length) return this.$toast('当前存在上传失败或上传中的图片')
     },
     selEventTypes(list) {

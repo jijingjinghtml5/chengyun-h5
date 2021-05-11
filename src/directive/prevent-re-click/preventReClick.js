@@ -1,5 +1,5 @@
 export default {
-  bind: function (el, binding) {
+  bind(el, binding) {
     function clickHandler(e) {
       if (el.contains(e.target)) {
         el.classList.add('van-button--disabled')

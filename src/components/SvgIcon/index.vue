@@ -7,6 +7,7 @@
 
 <script>
 import { isExternal } from '@/utils/validate'
+
 export default {
   name: 'SvgIcon',
   props: {
@@ -28,10 +29,9 @@ export default {
     },
     svgClass() {
       if (this.className) {
-        return 'svg-icon ' + this.className
-      } else {
-        return 'svg-icon'
+        return `svg-icon ${this.className}`
       }
+      return 'svg-icon'
     },
     styleExternalIcon() {
       return {

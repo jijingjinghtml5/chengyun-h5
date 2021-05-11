@@ -1,5 +1,5 @@
 import axios from 'axios'
-import store from '@/store'
+// import store from '@/store'
 import { Toast } from 'vant'
 // 根据环境不同引入不同api地址
 import { baseApi } from '@/config'
@@ -24,13 +24,10 @@ service.interceptors.request.use(
     }
     const token = localStorage.getItem('access_token')
     token &&
-      (config.params = Object.assign(
-        {},
-        {
-          token
-        },
-        config.params
-      ))
+      (config.params = {
+        token,
+        ...config.params
+      })
     // if (store.getters.token) {
     //   config.headers['X-Token'] = ''
     // }
@@ -63,13 +60,12 @@ service.interceptors.response.use(
         }, 2000)
       }
       return Promise.reject(res || 'error')
-    } else {
-      return Promise.resolve(res)
     }
+    return Promise.resolve(res)
   },
   error => {
     Toast.clear()
-    console.log('err' + error) // for debug
+    console.log(`err${error}`) // for debug
     return Promise.reject(error)
   }
 )

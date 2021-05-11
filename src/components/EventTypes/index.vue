@@ -1,5 +1,6 @@
 <template>
-  <van-popup v-model="showCategory" position="bottom" :style="{ height: '500px' }" get-container="body">
+  <!-- v-model="showCategory" -->
+  <van-popup position="bottom" :style="{ height: '500px' }" get-container="body">
     <van-field placeholder="搜索案件分类" left-icon="search" :border="false"> </van-field>
     <van-picker
       show-toolbar
@@ -20,6 +21,7 @@
 </template>
 <script>
 import { mapGetters } from 'vuex'
+
 export default {
   name: 'EventTypes',
   props: {

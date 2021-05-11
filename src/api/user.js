@@ -1,6 +1,6 @@
-import { userApi } from './index'
 // axios
 import request from '@/utils/request'
+import { userApi } from './index'
 
 // 登录
 export function fetchLogin(data) {

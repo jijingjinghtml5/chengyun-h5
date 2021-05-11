@@ -12,6 +12,7 @@
 <script>
 import { uploadImage, getImageAiInfo } from '@/api/common'
 import config from '@/config'
+
 export default {
   name: 'UploadImage',
   props: {
@@ -39,7 +40,7 @@ export default {
     this.fileList = this.value.map(item => {
       return {
         code: item,
-        url: config.asset + '/' + item,
+        url: `${config.asset}/${item}`,
         isImage: true
       }
     })
@@ -80,7 +81,7 @@ export default {
               this.aiInfo[res.data.code] = info
             }
             file.code = res.data.code
-            file.url = config.asset + '/' + res.data.code
+            file.url = `${config.asset}/${res.data.code}`
             file.status = 'done'
             file.message = '上传成功'
             const list = [...this.value]

@@ -11,6 +11,7 @@
 import { getUserInfo } from '@/api/user'
 import { getCaseType } from '@/api/common'
 import { mapActions } from 'vuex'
+
 export default {
   name: 'AppLayout',
   data() {
