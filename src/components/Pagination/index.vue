@@ -1,6 +1,6 @@
 <template>
+  <!-- v-model="listQuery.currentPage" -->
   <van-pagination
-    v-model="listQuery.currentPage"
     :total-items="listQuery.total"
     :items-per-page="listQuery.pageSize"
     @change="handleChangeCurrentPage"

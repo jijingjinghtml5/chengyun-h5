@@ -7,5 +7,5 @@ export const userApi = {
 export const commonApi = {
   UploadImage: '/api/wechat/user/getimage', // 上传图片
   ImageAiInfo: '/api/web/upload-ai-imgs', // ai信息
-  EventTypes: '/api/meta-data/event-types' // 案件分类
+  EventTypes: '/api/meta-data/event-types-new' // 案件分类
 }

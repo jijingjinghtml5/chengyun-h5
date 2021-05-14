@@ -15,7 +15,11 @@ import {
   Image,
   Uploader,
   Popup,
-  Picker
+  Picker,
+  RadioGroup,
+  Radio,
+  Collapse,
+  CollapseItem
 } from 'vant'
 
 Vue.use(Button)
@@ -32,3 +36,7 @@ Vue.use(Grid)
 Vue.use(Popup)
 Vue.use(Picker)
 Vue.use(GridItem)
+Vue.use(Radio)
+Vue.use(RadioGroup)
+Vue.use(Collapse)
+Vue.use(CollapseItem)

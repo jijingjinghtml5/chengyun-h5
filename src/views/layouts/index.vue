@@ -29,7 +29,6 @@ export default {
     const res = await getUserInfo()
     this.setUserInfo(res.data)
     getCaseType().then(res => {
-      console.log(res, 'res')
       this.setEventTypes(res.data)
     })
   }

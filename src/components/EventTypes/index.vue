@@ -1,6 +1,5 @@
 <template>
-  <!-- v-model="showCategory" -->
-  <van-popup position="bottom" :style="{ height: '500px' }" get-container="body">
+  <van-popup :value="showCategory" position="bottom" :style="{ height: '500px' }" get-container="body">
     <van-field placeholder="搜索案件分类" left-icon="search" :border="false"> </van-field>
     <van-picker
       show-toolbar
@@ -25,10 +24,7 @@ import { mapGetters } from 'vuex'
 export default {
   name: 'EventTypes',
   props: {
-    value: {
-      type: Array,
-      default: () => []
-    },
+    // 显示分类面板
     showCategory: {
       type: Boolean,
       default: false
@@ -40,11 +36,15 @@ export default {
   data() {
     return {}
   },
-  mounted() {},
   methods: {
-    sureEventTypes(val) {
+    /**
+     * @param {array} val
+     * @param {array} indexs
+     * @desc val:案件分类中文名 indexs:案件分类对应的索引
+     */
+    sureEventTypes(val, indexs) {
       this.$emit('close')
-      this.$emit('confirm', val)
+      this.$emit('confirm', val, indexs)
     }
   }
 }
