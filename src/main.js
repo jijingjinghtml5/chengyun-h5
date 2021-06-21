@@ -5,6 +5,7 @@ import 'regenerator-runtime/runtime'
 
 import Vue from 'vue'
 import preventReClick from '@/directive/prevent-re-click'
+import VConsole from 'vconsole'
 import App from './App.vue'
 import router from './router'
 import store from './store'
@@ -22,6 +23,9 @@ import 'lib-flexible/flexible'
 // filters
 import './filters'
 
+// call `console` methods as usual
+console.log('Hello world')
+new VConsole()
 Vue.config.productionTip = false
 Vue.use(preventReClick)
 

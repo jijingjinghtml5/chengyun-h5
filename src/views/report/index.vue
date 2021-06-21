@@ -42,6 +42,12 @@
           </div>
         </van-field>
       </van-cell-group>
+      <!-- 上传语音 -->
+      <van-cell class="title">上传语音</van-cell>
+      <van-cell-group>
+        <UploadAudio />
+      </van-cell-group>
+
       <ReportMap
         :visible="showMap"
         :current-case-type="caseType"
@@ -56,6 +62,7 @@
 <script>
 import NavBar from '@/components/NavBar/index'
 import UploadImage from '@/components/UploadImage/index'
+import UploadAudio from '@/components/UploadAudio/index'
 import EventTypes from '@/components/EventTypes/index'
 import ReportMap from '@/components/CdMap/report-map'
 import { mapGetters } from 'vuex'
@@ -65,6 +72,7 @@ export default {
   components: {
     NavBar,
     UploadImage,
+    UploadAudio,
     EventTypes,
     ReportMap
   },
