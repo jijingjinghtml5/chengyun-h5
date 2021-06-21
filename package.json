@@ -23,6 +23,7 @@
     "core-js": "^3.6.4",
     "lib-flexible": "^0.3.2",
     "lodash": "^4.17.15",
+    "proj4": "^2.7.2",
     "regenerator-runtime": "^0.13.5",
     "vant": "^2.12.14",
     "vue": "^2.6.11",

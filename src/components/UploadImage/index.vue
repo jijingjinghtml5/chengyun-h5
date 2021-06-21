@@ -25,6 +25,7 @@ export default {
       type: Number,
       default: 1
     },
+    // 是否需要智能解析案件分类
     needAI: {
       type: Boolean,
       default: false

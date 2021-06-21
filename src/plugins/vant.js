@@ -19,7 +19,9 @@ import {
   RadioGroup,
   Radio,
   Collapse,
-  CollapseItem
+  CollapseItem,
+  Search,
+  Toast
 } from 'vant'
 
 Vue.use(Button)
@@ -40,3 +42,5 @@ Vue.use(Radio)
 Vue.use(RadioGroup)
 Vue.use(Collapse)
 Vue.use(CollapseItem)
+Vue.use(Search)
+Vue.use(Toast)
