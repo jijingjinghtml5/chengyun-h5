@@ -44,6 +44,7 @@ service.interceptors.response.use(
   response => {
     Toast.clear()
     const res = response.data
+    console.log(res, 'res')
     if (res.code !== 200) {
       // 登录超时,重新登录
       // if (res.status === 401) {
@@ -58,6 +59,8 @@ service.interceptors.response.use(
         setTimeout(() => {
           router.replace('/login')
         }, 2000)
+      } else {
+        Toast(res.msg || res.message)
       }
       return Promise.reject(res || 'error')
     }

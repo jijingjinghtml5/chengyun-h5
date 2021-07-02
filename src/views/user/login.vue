@@ -52,7 +52,7 @@ export default {
     },
     // 表单提交
     async onClickButtonSubmit() {
-      // conosle.log(e)
+      // console.log(e)
       if (this.username == '') {
         this.$toast('用户名不能为空')
       } else if (this.password == '') {

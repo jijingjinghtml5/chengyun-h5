@@ -21,7 +21,8 @@ import {
   Collapse,
   CollapseItem,
   Search,
-  Toast
+  Toast,
+  Dialog
 } from 'vant'
 
 Vue.use(Button)
@@ -44,3 +45,4 @@ Vue.use(Collapse)
 Vue.use(CollapseItem)
 Vue.use(Search)
 Vue.use(Toast)
+Vue.use(Dialog)

@@ -12,6 +12,15 @@ export function uploadImage(data) {
   })
 }
 
+// 上传文件
+export function uploadFile(data) {
+  return request({
+    url: commonApi.UploadFile,
+    method: 'post',
+    data
+  })
+}
+
 // 根据图片获取智能信息
 export function getImageAiInfo(data) {
   return request({

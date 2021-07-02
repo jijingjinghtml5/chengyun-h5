@@ -45,7 +45,7 @@
       <!-- 上传语音 -->
       <van-cell class="title">上传语音</van-cell>
       <van-cell-group>
-        <UploadAudio />
+        <UploadAudio v-model="audioList" />
       </van-cell-group>
 
       <ReportMap
@@ -93,7 +93,8 @@ export default {
       address: {
         address: ''
       },
-      mapLoaded: false
+      mapLoaded: false,
+      audioList: []
     }
   },
   created() {},

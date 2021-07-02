@@ -1,6 +1,6 @@
 <template>
   <van-popup :value="showCategory" position="bottom" :style="{ height: '500px' }" get-container="body">
-    <van-field placeholder="搜索案件分类" left-icon="search" :border="false"> </van-field>
+    <!-- <van-field placeholder="搜索案件分类" left-icon="search" :border="false"> </van-field> -->
     <van-picker
       show-toolbar
       :columns="eventTypes"
